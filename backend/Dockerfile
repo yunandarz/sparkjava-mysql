@@ -26,6 +26,6 @@ CMD ["java", "-jar", "target/app.jar" ]
 
 FROM eclipse-temurin:17-jre-focal
 ARG DEPENDENCY=/workdir/server/target
-EXPOSE 8080
+EXPOSE 3000
 COPY --from=build ${DEPENDENCY}/app.jar /app.jar
 CMD java -jar /app.jar
